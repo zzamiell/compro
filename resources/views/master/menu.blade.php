@@ -74,13 +74,7 @@
                                 <li><a href="{{route('service_hargapedia')}}" class="sub1 nav-link @if(Request::segment(1) == 'service_hargapedia') active @else '' @endif" style="color: #3AAFA9; border-bottom: 1px solid #3AAFA9;">Hargapedia</a></li>
                             </ul>
                         </li>
-                        {{-- <li class="nav-item"><a class="nav-link @if(Request::segment(1) == 'aboutus') active @else '' @endif" href="{{route('aboutus')}}">About Us</a></li> --}}
-                        <li class="nav-item">
-                            <form class="form-inline" target="_blank"
-                                action="https://docs.google.com/forms/d/e/1FAIpQLSe6hKUXw_By-pg7yabL0FxoTM02ZPTxoXy8PE3yboRuUCuyeA/viewform">
-                                <button class="nav-link">FAQs</button>
-                            </form>
-                        </li>
+
                         <li class="nav-item onhover-dropdown"><a class="nav-link dropbtn  @if(Request::segment(1) == 'aboutus' || Request::segment(1) == 'contactus') active @else '' @endif" href="#">Company</a>
                             <ul class="dropdown dropdown-menu-company" style="border:0; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; box-shadow: 2px 2px 3px #999; background-color: white;">
                                 <li><a href="{{route('aboutus')}}" class="sub1 nav-link @if(Request::segment(1) == 'aboutus') active @else '' @endif" style="color: #3AAFA9; border-bottom: 1px solid #3AAFA9;">About Us</a></li>

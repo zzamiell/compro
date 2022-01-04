@@ -26,3 +26,7 @@ Route::get('/service_dataextraction', [HomeController::class, 'service_dataextra
 Route::get('/test', [HomeController::class, 'test'])->name('test');
 Route::get('/getData', [HomeController::class, 'getData'])->name('getData');
 Route::post('/addData', [HomeController::class, 'addData'])->name('addData');
+
+Route::get('/manage-extraction', [HomeController::class, 'manageextraction'])->name('manageextraction');
+Route::post('/addData', [HomeController::class, 'addData'])->name('addData');
+Route::delete('/deletedata/{id}', [HomeController::class, 'deletedata'])->name('deletedata');

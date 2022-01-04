@@ -126,92 +126,24 @@
     </div>
     <div class="container" style="margin-right: 6%;margin-top: 3%">
         <div class="row flex-nowrap"  id="container">
-          <div class="col-md-3 d-flex align-items-stretch">
-              <div class="card card-block" style="background-color: rgba(255, 255, 255, 0.658);  border:0; border-radius: 15px; box-shadow: 2px 2px 3px #999;">
-                  <div class="card-body" style="margin-top: 35%" id="hover">
-                      <h2 class="text-center" style="color: #2B7A77">Price</h2>
-                      <h2 class="text-center" style="color: #2B7A77">Monitoring</h2>
-                  </div>
-                  <div class="overlay">
-                      <div class="theOver" style="font-size: 13px;text-justify: inter-word;">
-                      <span style="color: black; font-size: 10px">
-                        Our data extraction service can send you product and pricing datasets from any marketplace.
-                        You can stay up to date about price changes that your competitors make, know the trends behind them and
-                        keep your product's price to stay competitive.
-
-                      </span>
-                      <button class="btn btn-primary btn-sm mt-3 text-center">Read More</button>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <div class="col-md-3 d-flex align-items-stretch">
-              <div class="card card-block" style="background-color: rgba(255, 255, 255, 0.658);  border:0; border-radius: 15px; box-shadow: 2px 2px 3px #999;">
-                  <div class="card-body" style="margin-top: 40%">
-                      <h2 class="text-center" style="color: #2B7A77;white-space: nowrap;">Recruitment</h2>
-                  </div>
-                  <div class="overlay">
-                      <div class="theOver" style="font-size: 11px;text-justify: inter-word;">
-                      <span style="color: black;  font-size: 10px">
-                        Quality data on the potential candidate and potential candidate can help make a better hiring decision.
-                        Let us send a list of a potential candidates and your team can focus on obtaining top talent. Just tell us
-                        about the detailed data that you want and you will receive 100% data that you want.
-                      </span>
-                      <button class="btn btn-primary btn-sm mt-3 text-center">Read More</button>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <div class="col-md-3 d-flex align-items-stretch">
-              <div class="card card-block" style="background-color: rgba(255, 255, 255, 0.658);  border:0; border-radius: 15px; box-shadow: 2px 2px 3px #999;">
-                  <div class="card-body p-5" style="margin-top: 23%">
-                      <h2 class="text-center" style="color: #2B7A77">Market</h2>
-                      <h2 class="text-center" style="color: #2B7A77">Research</h2>
-                      <h1 class="text-center" style="opacity: 0">Regions</h1>
-                  </div>
-                  <div class="overlay">
-                      <div class="theOver" style="font-size: 11px;text-justify: inter-word;">
-                      <span style="color: black; font-size: 10px">
-                        We help you gather product reviews and save your time to see where the untapped market opportunities are.
-                      </span>
-                      <button class="btn btn-primary btn-sm mt-3 text-center">Read More</button>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <div class="col-lg-3 d-flex align-items-stretch">
-              <div class="card card-block" style="background-color: rgba(255, 255, 255, 0.658);  border:0; border-radius: 15px; box-shadow: 2px 2px 3px #999;">
-                  <div class="card-body p-3" style="margin-top: 36%">
-                      <h4 class="text-center" style="color: #2B7A77;white-space: nowrap;">Data Extraction</h4>
-                      <h4 class="" style="color: #2B7A77;white-space: nowrap;">Services That You</h4>
-                      <h4 class="text-center" style="color: #2B7A77;white-space: nowrap;">Can Trust</h4>
-                  </div>
-                  <div class="overlay">
-                      <div class="theOver" style="font-size: 11px;text-justify: inter-word;">
-                      <span style="color: black;font-size: 10px">
-                        Gather social media data from any profiles that mention you and compare with competitors and protect your social media reputation
-                      </span>
-                      <button class="btn btn-primary btn-sm mt-3 text-center">Read More</button>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <div class="col-lg-3 d-flex align-items-stretch">
-              <div class="card card-block" style="background-color: rgba(255, 255, 255, 0.658);  border:0; border-radius: 15px; box-shadow: 2px 2px 3px #999;">
-                  <div class="card-body p-5" style="margin-top: 17%">
-                      <h2 class="text-center" style="color: #2B7A77">Social Media</h2>
-                      <h2 class="text-center" style="color: #2B7A77">Data</h2>
-                  </div>
-                  <div class="overlay">
-                      <div class="theOver" style="font-size: 11px;text-justify: inter-word;">
-                      <span style="color: black">
-                         We know how frustasing it can be to find out what your house is worth. That's why our interface is so easy to use - just enter the location and other detail of houses do you need and you'll get a quote in seconds!
-                      </span>
-                      <button class="btn btn-primary btn-sm mt-3 text-center">Read More</button>
-                      </div>
-                  </div>
-              </div>
-          </div>
+        @foreach ($data as $key => $item)
+        <div class="col-md-3 d-flex align-items-stretch">
+            <div class="card card-block" style="background-color: rgba(255, 255, 255, 0.658);  border:0; border-radius: 15px; box-shadow: 2px 2px 3px #999;">
+                <div class="card-body" style="margin-top: 0%" id="hover">
+                    <h2 class="text-center" style="color: #2B7A77">{{$item->nama_data}}</h2>
+                    {{-- <h2 class="text-center" style="color: #2B7A77">Monitoring</h2> --}}
+                </div>
+                <div class="overlay">
+                    <div class="theOver" style="font-size: 13px;text-justify: inter-word;">
+                    <span class="p-5" style="color: black; font-size: 10px">
+                        {{$item->deskripsi}}
+                    </span>
+                    <button class="btn btn-primary btn-sm mt-3 text-center">Read More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @endforeach
         </div>
         {{-- <button class="float-left" id="slideLeft" type="button"><i class="fa fa-arrow-left"></i></button>
         <button class="float" id="slideRight" type="button"><i class="fa fa-arrow-right"></i></button> --}}
